@@ -10,48 +10,40 @@
     --text-color: #727272;
     --color-blue: #34547a;
     --container: 1110px;
+    --mobile-fontsize: 14px;
+    --mobile-header-size: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: var(--main-color);
+}
+
+h1, h2, h3, p {
+    margin: 0;
 }
 
 .container {
     width: min(100% - 40px, var(--container));
-    margin-inline: auto;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .header {
-    height: 700px;
     background-color: var(--main-color);
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-.navbar__list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar__list-item {
-    font-family: var(--font-family);
-    font-weight: var(--header-fontweight);
-    font-size: var(--header-fontsize);
-    text-decoration: none;
-    color: black;
-    margin: 0 15px;
-}
-
-.navbar__list-item--active {
-    color: var(--active-color);
+    padding: 100px 0;
 }
 
 .header__title {
@@ -63,262 +55,203 @@ body {
 }
 
 .header__text {
-    width: 540px;
+    width: 100%;
+    max-width: 540px;
     color: var(--text-color);
     font-size: var(--header-fontsize);
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.navbar__list-item {
     font-family: var(--font-family);
-    font-weight: var(--content-fontweight);
+    font-weight: var(--header-fontweight);
+    font-size: var(--header-fontsize);
+    text-decoration: none;
+    color: black;
     line-height: 26.25px;
-    padding-top: 60px;
+    letter-spacing: 0.1em;
+    margin: 0 23px;
+    transition: color 0.3s ease;
+}
+
+.navbar__list-item:hover {
+    color: var(--active-color);
+}
+
+.navbar__list-item--active {
+    color: var(--active-color);
+    font-weight: 700;
 }
 
 .button {
     display: flex;
-    font-family: var(--font-family);
-    font-weight: var(--content-fontweight);
-    letter-spacing: 0.1em;
-    width: 228px;
-    height: 66px;
     justify-content: center;
     align-items: center;
-    color: white;
+    width: 228px;
+    height: 66px;
     background-color: var(--color-blue);
+    color: white;
+    font-family: var(--font-family);
+    text-transform: uppercase;
     text-decoration: none;
-    margin-top: 65px;
+    margin-top: 40px;
 }
 
 .about {
-    height: 359px;
-    display: flex;
-    flex-direction: column;
     background-color: var(--secondary-color);
-    align-items: center;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .about__header {
+    font-size: var(--big-header-fontsize);
     font-weight: var(--header-fontweight);
-    font-family: var(--font-family);
-    line-height: 37.5px;
-    font-size: 32px;
-    padding-top: 112px;
 }
 
 .about__text {
-    width: 540px;
-    font-weight: var(--content-fontweight);
-    font-family: var(--font-family);
+    max-width: 540px;
     color: var(--text-color);
-    text-align: center;
-    line-height: 26.25px;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    font-size: var(--header-fontsize);
+    line-height: 1.5;
+    margin: 20px auto 0;
 }
 
 .projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 250px;
     background-color: var(--color-blue);
+    padding: 50px 0;
 }
 
 .projects__title {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    color: white;
+    font-family: var(--font-family);
+    font-size: var(--big-header-fontsize);
+    font-weight: var(--header-fontweight);
+    margin-bottom: 30px;
+}
+
+.projects__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
 }
 
 .projects__item {
     display: flex;
-    flex-direction: row;
-    width: 141px;
-    height: 50px;
-    padding-right: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    text-align: center;
+}
+
+.projects__item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .item__number {
     color: white;
     font-family: var(--font-family);
     font-size: 21px;
-    line-height: 24.61px;
-    margin: 0 0 0 20px;
+    font-weight: var(--header-fontweight);
+    margin: 0;
 }
 
 .item__text {
     color: white;
     font-family: var(--font-family);
     font-size: 16px;
-    line-height: 26.25px;
-    margin: 0 0 0 20px;
+    font-weight: var(--content-fontweight);
+    margin: 0;
 }
 
 .work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 1004px;
     background-color: var(--secondary-color);
+    padding: 60px 0;
+    text-align: center;
 }
 
 .work__header {
     font-size: var(--big-header-fontsize);
-    line-height: 37.5px;
-    font-family: var(--font-family);
-    margin: 0;
-    padding-top: 100px;
+    margin-bottom: 20px;
 }
 
 .work__text {
-    width: 540px;
-    font-size: var(--header-fontsize);
-    font-weight: var(--content-fontweight);
-    line-height: 26.25px;
-    font-family: var(--font-family);
+    max-width: 540px;
     color: var(--text-color);
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 57px;
+    font-size: var(--header-fontsize);
+    margin: 0 auto 40px;
+    line-height: 1.5;
 }
 
 .video {
-    border: none;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
     margin: 0 auto;
-    padding-bottom: 100px;
 }
 
 .footer {
-    height: 151px;
     background-color: var(--color-blue);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
 }
 
 .footer__header {
-    padding-top: 50px;
-    color: white;
     font-size: 21px;
-    font-family: var(--font-family);
-    font-weight: var(--header-fontweight);
-    line-height: 24.61px;
 }
 
 .footer__text {
-    padding-top: 20px;
-    color: white;
-    font-family: var(--font-family);
-    font-weight: var(--content-fontweight);
     font-size: 13px;
-    line-height: 21.33px;
+    margin-top: 10px;
 }
 
-@media (max-width: 767px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 365px) {
+    :root {
+        --header-fontsize: var(--mobile-fontsize);
+        --big-header-fontsize: var(--mobile-header-size);
     }
 
-    .navbar__list {
-        flex-direction: column;
-    }
-
-    .navbar__list-item {
-        margin: 10px 0;
-        font-size: 18px;
+    .header {
+        padding: 60px 0;
     }
 
     .header__title {
-        font-size: 24px;
+        font-size: 36px;
         text-align: center;
     }
 
-    .header__text {
-        font-size: 14px;
+    .header__text, .about__text, .work__text {
+        font-size: var(--mobile-fontsize);
         text-align: center;
-        width: 90%;
     }
 
     .button {
         width: 100%;
-        font-size: 14px;
+        max-width: 200px;
+        height: 56px;
     }
 
-    .projects__item {
-        width: 100%;
-        padding: 10px 0;
+    .projects__container {
+        flex-direction: column;
     }
 
-    .work__header {
-        font-size: 24px;
-    }
-
-    .work__text {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .navbar__list-item {
-        font-size: 20px;
-    }
-
-    .header__title {
-        font-size: 32px;
-    }
-
-    .header__text {
-        font-size: 16px;
-    }
-
-    .button {
-        width: 80%;
-        font-size: 16px;
-    }
-
-    .projects__item {
-        width: 48%;
-    }
-
-    .work__header {
-        font-size: 28px;
-    }
-
-    .work__text {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .navbar__list-item {
-        font-size: 21px;
-    }
-
-    .header__title {
-        font-size: 48px;
-    }
-
-    .header__text {
-        font-size: 18px;
-    }
-
-    .button {
-        width: auto;
-        font-size: 18px;
-    }
-
-    .projects__item {
-        width: 30%;
-    }
-
-    .work__header {
-        font-size: 32px;
-    }
-
-    .work__text {
-        font-size: 18px;
+    .video {
+        height: 300px;
     }
 }
