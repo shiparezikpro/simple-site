@@ -6,4 +6,4 @@ Lorem
 
 ## Cайт
 
-https://github.com/shiparezikpro/simple-site.git
+https://shiparezikpro.github.io/simple-site/
