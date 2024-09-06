@@ -221,37 +221,66 @@ h1, h2, h3, p {
     margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    :root {
-        --header-fontsize: var(--mobile-fontsize);
-        --big-header-fontsize: var(--mobile-header-size);
-    }
-
-    .header {
-        padding: 60px 0;
+@media (min-width: 375px) {
+    .container {
+        width: min(100% - 20px, var(--container));
     }
 
     .header__title {
         font-size: 36px;
-        text-align: center;
+        padding-top: 120px;
     }
 
-    .header__text, .about__text, .work__text {
-        font-size: var(--mobile-fontsize);
-        text-align: center;
+    .header__text {
+        font-size: 14px;
+        width: 100%;
+        padding-top: 30px;
     }
 
     .button {
-        width: 100%;
-        max-width: 200px;
+        width: 200px;
         height: 56px;
+        font-size: 14px;
     }
 
-    .projects__container {
-        flex-direction: column;
+    .about__header {
+        font-size: 28px;
+        padding-top: 80px;
+    }
+
+    .about__text {
+        width: 100%;
+        font-size: 14px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .projects {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .projects__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .work__header {
+        font-size: 24px;
+        padding-top: 60px;
+    }
+
+    .work__text {
+        font-size: 14px;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .video {
-        height: 300px;
+        width: 100%;
+        height: auto;
     }
 }
