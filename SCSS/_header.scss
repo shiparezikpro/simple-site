@@ -1,0 +1,21 @@
+.header {
+    background-color: $main-color;
+    padding: 60px 0;
+  
+    .header__title {
+      font-family: $font-family;
+      font-weight: $header-fontweight;
+      font-size: 48px;
+      color: black;
+      padding-top: 100px;
+      text-align: left;
+    }
+  
+    .header__text {
+      max-width: 540px;
+      color: $text-color;
+      font-size: $header-fontsize;
+      line-height: 1.5;
+      padding-top: 20px;
+    }
+  }

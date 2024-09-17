@@ -1,0 +1,17 @@
+.content {
+    @include center-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button {
+    @include center-flex;
+    width: 228px;
+    height: 66px;
+    background-color: $color-blue;
+    color: white;
+    font-family: $font-family;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 40px;
+  }

@@ -1,0 +1,15 @@
+.footer {
+    background-color: $color-blue;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+  
+    .footer__header {
+      font-size: 21px;
+    }
+  
+    .footer__text {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  }

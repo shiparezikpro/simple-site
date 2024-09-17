@@ -1,0 +1,49 @@
+.projects {
+    @include center-flex;
+    flex-direction: column;
+    background-color: $color-blue;
+    padding: 50px 0;
+  
+    .projects__title {
+      color: white;
+      font-family: $font-family;
+      font-size: $big-header-fontsize;
+      font-weight: $header-fontweight;
+      margin-bottom: 30px;
+    }
+  
+    .projects__items {
+      @include center-flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  
+      .projects__item {
+        @include center-flex;
+        flex-direction: column;
+        width: 150px;
+        text-align: center;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+  
+        .item__number {
+          color: white;
+          font-family: $font-family;
+          font-size: 21px;
+          font-weight: $header-fontweight;
+          margin: 0;
+        }
+  
+        .item__text {
+          color: white;
+          font-family: $font-family;
+          font-size: 16px;
+          font-weight: $content-fontweight;
+          margin: 0;
+        }
+      }
+    }
+  }

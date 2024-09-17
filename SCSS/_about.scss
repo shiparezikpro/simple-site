@@ -1,0 +1,18 @@
+.about {
+    background-color: $secondary-color;
+    padding: 60px 0;
+    text-align: center;
+  
+    .about__header {
+      font-size: $big-header-fontsize;
+      font-weight: $header-fontweight;
+    }
+  
+    .about__text {
+      max-width: 540px;
+      color: $text-color;
+      font-size: $header-fontsize;
+      line-height: 1.5;
+      margin: 20px auto 0;
+    }
+  }

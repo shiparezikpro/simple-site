@@ -1,0 +1,26 @@
+.work {
+    background-color: $secondary-color;
+    padding: 60px 0;
+    text-align: center;
+  
+    .work__header {
+      font-size: $big-header-fontsize;
+      margin-bottom: 20px;
+    }
+  
+    .work__text {
+      max-width: 540px;
+      color: $text-color;
+      font-size: $header-fontsize;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+    }
+  
+    .video {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 0 auto;
+      aspect-ratio: 16/9;
+    }
+  }
