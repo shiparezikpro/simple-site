@@ -43,7 +43,7 @@ h1, h2, h3, p {
 
 .header {
     background-color: var(--main-color);
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .header__title {
@@ -51,7 +51,8 @@ h1, h2, h3, p {
     font-weight: var(--header-fontweight);
     font-size: 48px;
     color: black;
-    padding-top: 162px;
+    padding-top: 100px;
+    text-align: left;
 }
 
 .header__text {
@@ -201,8 +202,9 @@ h1, h2, h3, p {
 .video {
     width: 100%;
     max-width: 800px;
-    height: 450px;
+    height: auto;
     margin: 0 auto;
+    aspect-ratio: 16/9;
 }
 
 .footer {
@@ -234,25 +236,29 @@ h1, h2, h3, p {
 
     .navbar__list-item {
         margin: 10px 0;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .header__title {
-        font-size: 28px;
+        font-size: var(--mobile-header-size);
         text-align: center;
         padding: 10px 0;
     }
 
     .header__text {
-        font-size: 16px;
+        font-size: var(--mobile-fontsize);
         padding: 10px;
         text-align: center;
     }
 
     .button {
         width: 100%;
-        font-size: 14px;
+        font-size: var(--mobile-fontsize);
         padding: 10px 0;
+    }
+
+    .projects__items {
+        gap: 10px;
     }
 }
 
@@ -283,4 +289,3 @@ h1, h2, h3, p {
         width: auto;
     }
 }
-Основные шаги:
