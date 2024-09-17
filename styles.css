@@ -221,37 +221,66 @@ h1, h2, h3, p {
     margin-top: 10px;
 }
 
-@media (max-width: 365px) {
-    :root {
-        --header-fontsize: var(--mobile-fontsize);
-        --big-header-fontsize: var(--mobile-header-size);
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .header {
-        padding: 60px 0;
+    .navbar__list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar__list-item {
+        margin: 10px 0;
+        font-size: 16px;
     }
 
     .header__title {
-        font-size: 36px;
+        font-size: 28px;
         text-align: center;
+        padding: 10px 0;
     }
 
-    .header__text, .about__text, .work__text {
-        font-size: var(--mobile-fontsize);
+    .header__text {
+        font-size: 16px;
+        padding: 10px;
         text-align: center;
     }
 
     .button {
         width: 100%;
-        max-width: 200px;
-        height: 56px;
-    }
-
-    .projects__container {
-        flex-direction: column;
-    }
-
-    .video {
-        height: 300px;
+        font-size: 14px;
+        padding: 10px 0;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar__list-item {
+        font-size: 18px;
+    }
+
+    .header__title {
+        font-size: 32px;
+    }
+
+    .button {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navbar__list-item {
+        font-size: 20px;
+    }
+
+    .header__title {
+        font-size: 48px;
+    }
+
+    .button {
+        width: auto;
+    }
+}
+Основные шаги:
